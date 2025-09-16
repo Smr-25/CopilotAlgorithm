@@ -41,15 +41,11 @@ else
 
 #region Task2
 
-string str = "salam";
+string str = "market";
 if (str.Length % 2 != 0)
     Console.WriteLine(str[(str.Length - 1) / 2]);
 else
-{
-    Console.Write(str[(str.Length / 2) - 1]);
-    Console.WriteLine(str[str.Length / 2]);
-
-}
+    Console.WriteLine(str[(str.Length / 2) - 1].ToString() + str[str.Length / 2].ToString()); 
 
 #endregion
 
