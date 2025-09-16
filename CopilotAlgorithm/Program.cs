@@ -5,14 +5,36 @@
 int a = Convert.ToInt32(Console.ReadLine());
 int b = Convert.ToInt32(Console.ReadLine());
 int c = Convert.ToInt32(Console.ReadLine());
-int temp = a ^ 2 + b ^ 2;
-int temp2 = c ^ 2;
-if (temp == temp2)
-    Console.WriteLine("Duzbucaqli ucbucaq");
-else if (temp > temp2)
-    Console.WriteLine("Korbucaqli ucbucaq");
+int max = 0;
+int temp1 = 0;
+int temp2 = 0;
+
+
+if (a > b && a > c)
+{
+    max = a;
+    temp1 = max * max;
+    temp2 = b * b + c * c ;
+}
+else if (b > c) {
+    max = b;
+    temp1 = max * max;
+    temp2 = a * a + c * c;
+}
+else {
+    max = c;
+    temp1 = max * max;
+    temp2 = a * a + b * b;
+
+}
+Console.WriteLine(temp1);
+Console.WriteLine( temp2);
+if (temp1 == temp2)
+      Console.WriteLine("Duzbucaqli ucbucaq");
+else if (temp1 > temp2)
+      Console.WriteLine("Korbucaqli ucbucaq");
 else
-    Console.WriteLine("Itibucaqli ucbucaq");
+      Console.WriteLine("Itibucaqli ucbucaq");
 
 
 #endregion
